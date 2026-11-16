@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="background:#ffffff" viewBox="0 0 680 710" role="img" aria-labelledby="sch-t sch-d">
+<style>:root{--card:#ffffff;--ink:#171b19;--w-yellow:#d9a400;--w-blue:#2b6be0;--w-green:#1f9a5c}
+text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;fill:#171b19;font-size:12px}
+.muted{fill:var(--muted)}
+.box{fill:#ffffff;stroke:#171b19;stroke-width:2}
+.title{font-weight:700;font-size:13px}
+.pin{fill:#171b19}
+.w{fill:none;stroke-width:3;stroke-linejoin:round}
+.w-yellow{stroke:#d9a400}
+.w-blue{stroke:#2b6be0}
+.w-green{stroke:#1f9a5c;stroke-dasharray:5 5}
+.w-black{stroke:#171b19}
+.dot{fill:#171b19}
+.cap{fill:none;stroke:#171b19;stroke-width:2}
+.nc{fill:var(--warn);font-weight:700}
+.w-purple{stroke:#7F77DD}
+.w-coral{stroke:#D85A30}</style>
+    <title id="sch-t">Schéma complet du wind sim</title>
+    <desc id="sch-d">L’écran LCD avec son adaptateur I2C se relie à l’Arduino : SCL vers A5, SDA vers A4, GND vers GND, VCC vers 5V. L’alimentation 12 V alimente un mini WAGO +12 V et un mini WAGO masse. Les deux ventilateurs, sur leurs rallonges coupées, envoient leurs fils jaunes au +12 V et noirs à la masse ; le bleu gauche va à D9, le bleu droit à D10, les verts sont isolés. Un GND de l’Arduino rejoint la masse. Chaque fil arrive sur l’Arduino par un picot du kit soudé.</desc>
+    <path class="w w-yellow" d="M80 524 V20 H480 V160 H500"/>
+    <path class="w w-black" d="M88 524 V28 H470 V220 H500"/>
+    <rect class="box" x="130" y="40" width="200" height="60" rx="6"/>
+    <text class="title" x="230" y="64" text-anchor="middle">ÉCRAN LCD 1602</text>
+    <text class="muted" x="230" y="84" text-anchor="middle">starter kit</text>
+    <rect class="box" x="160" y="100" width="140" height="36" rx="4"/>
+    <text x="230" y="114" text-anchor="middle">adaptateur I2C</text>
+    <text x="175" y="130" text-anchor="middle">SCL</text>
+    <text x="200" y="130" text-anchor="middle">SDA</text>
+    <text x="260" y="130" text-anchor="middle">GND</text>
+    <text x="285" y="130" text-anchor="middle">VCC</text>
+    <path class="w w-purple" d="M175 136 V190 H225 V248"/>
+    <path class="w w-purple" d="M200 136 V175 H245 V248"/>
+    <path class="w w-black" d="M260 136 V200 H350 V248"/>
+    <path class="w w-coral" d="M285 136 V185 H400 V248"/>
+    <rect class="box" x="510" y="40" width="130" height="50" rx="6"/>
+    <text class="title" x="575" y="62" text-anchor="middle">ALIM 12 V</text>
+    <text class="muted" x="575" y="80" text-anchor="middle">câble coupé</text>
+    <rect class="box" x="500" y="150" width="100" height="20" rx="4"/>
+    <text x="550" y="164" text-anchor="middle">WAGO +12 V</text>
+    <rect class="box" x="500" y="210" width="100" height="20" rx="4"/>
+    <text x="550" y="224" text-anchor="middle">WAGO masse</text>
+    <path class="w w-yellow" d="M540 90 V150"/>
+    <path class="w w-black" d="M630 90 V220 H622 A6 6 0 0 0 610 220 H600"/>
+    <path class="w w-black" d="M375 248 V240 H394 A6 6 0 0 1 406 240 H520 V230"/>
+    <rect class="box" x="200" y="260" width="240" height="140" rx="6"/>
+    <text class="title" x="320" y="326" text-anchor="middle">ARDUINO UNO</text>
+    <text class="muted" x="320" y="344" text-anchor="middle">retourné, USB à droite</text>
+    <text x="225" y="278" text-anchor="middle">A5</text>
+    <text x="245" y="292" text-anchor="middle">A4</text>
+    <text x="350" y="278" text-anchor="middle">GND</text>
+    <text x="375" y="292" text-anchor="middle">GND</text>
+    <text x="400" y="278" text-anchor="middle">5V</text>
+    <text x="260" y="390" text-anchor="middle">D9</text>
+    <text x="292" y="376" text-anchor="middle">D10</text>
+    <rect x="440" y="310" width="18" height="30" rx="2" fill="#5F5E5A"/>
+    <text x="464" y="329">USB vers le PC</text>
+    <g fill="#BA7517">
+      <rect x="222" y="248" width="6" height="12"/><rect x="242" y="248" width="6" height="12"/>
+      <rect x="347" y="248" width="6" height="12"/><rect x="372" y="248" width="6" height="12"/>
+      <rect x="397" y="248" width="6" height="12"/>
+      <rect x="257" y="400" width="6" height="12"/><rect x="287" y="400" width="6" height="12"/>
+    </g>
+    <g fill="#B4B2A9">
+      <circle cx="225" cy="248" r="3"/><circle cx="245" cy="248" r="3"/><circle cx="350" cy="248" r="3"/>
+      <circle cx="375" cy="248" r="3"/><circle cx="400" cy="248" r="3"/>
+      <circle cx="260" cy="412" r="3"/><circle cx="290" cy="412" r="3"/>
+    </g>
+    <path class="w w-blue" d="M104 524 V450 H260 V412"/>
+    <path class="w w-blue" d="M576 524 V460 H290 V412"/>
+    <line class="w w-green" x1="96" y1="524" x2="96" y2="508"/>
+    <rect x="92" y="502" width="8" height="7" rx="2" fill="#888780"/>
+    <line class="w w-green" x1="584" y1="524" x2="584" y2="508"/>
+    <rect x="580" y="502" width="8" height="7" rx="2" fill="#888780"/>
+    <path class="w w-black" d="M600 524 V240 H580 V230"/>
+    <path class="w w-yellow" d="M616 524 V160 H600"/>
+    <line x1="92" y1="532" x2="92" y2="588" stroke="#888780" stroke-width="7"/>
+    <line x1="86" y1="530" x2="98" y2="526" stroke="#171b19" stroke-width="1"/>
+    <rect x="84" y="588" width="16" height="12" rx="2" fill="#5F5E5A"/>
+    <text class="muted" x="110" y="564">rallonge coupée</text>
+    <rect class="box" x="20" y="600" width="150" height="40" rx="6"/>
+    <text class="title" x="95" y="625" text-anchor="middle">VENTILATEUR G.</text>
+    <line x1="596" y1="532" x2="596" y2="588" stroke="#888780" stroke-width="7"/>
+    <line x1="590" y1="530" x2="602" y2="526" stroke="#171b19" stroke-width="1"/>
+    <rect x="588" y="588" width="16" height="12" rx="2" fill="#5F5E5A"/>
+    <text class="muted" x="566" y="564" text-anchor="end">rallonge coupée</text>
+    <rect class="box" x="510" y="600" width="150" height="40" rx="6"/>
+    <text class="title" x="585" y="625" text-anchor="middle">VENTILATEUR D.</text>
+    <text class="muted" x="20" y="672">Petit pont : les fils se croisent sans contact. Vert : coupé court et isolé.</text>
+    <text class="muted" x="20" y="694">Picot doré : picot de la barrette du kit, soudé au fil et enfoncé dans l’Arduino.</text>
+  </svg>
